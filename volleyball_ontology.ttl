@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vbn: <http://example.org/volleyball#> .
+
+vbn:Athlete a rdfs:Class ;
+    rdfs:subClassOf vbn:Person .
+
+vbn:Nationality a rdfs:Class .
+
+vbn:Person a rdfs:Class .
+
+vbn:Position a rdfs:Class .
+
+vbn:Team a rdfs:Class .
+
+vbn:VolleyballPlayer a rdfs:Class ;
+    rdfs:subClassOf vbn:Athlete .
+
+vbn:hasHeight a rdf:Property ;
+    rdfs:domain vbn:VolleyballPlayer ;
+    rdfs:range rdfs:Literal .
+
+vbn:hasJerseyNumber a rdf:Property ;
+    rdfs:domain vbn:VolleyballPlayer ;
+    rdfs:range rdfs:Literal .
+
+vbn:hasName a rdf:Property ;
+    rdfs:domain vbn:Person ;
+    rdfs:range rdfs:Literal .
+
+vbn:hasNationality a rdf:Property ;
+    rdfs:domain vbn:Person ;
+    rdfs:range vbn:Nationality .
+
+vbn:hasPosition a rdf:Property ;
+    rdfs:domain vbn:VolleyballPlayer ;
+    rdfs:range vbn:Position .
+
+vbn:playsFor a rdf:Property ;
+    rdfs:domain vbn:VolleyballPlayer ;
+    rdfs:range vbn:Team .
+
